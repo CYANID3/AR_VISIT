@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AR Scene</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     <style>
-      html, body {
+      html,
+      body {
         margin: 0;
         overflow: hidden;
         height: 100%;
@@ -19,7 +22,7 @@
   </head>
   <body>
     <div class="loader">
-      <div>Loading, please wait...</div>
+        <div>Loading, please wait...</div>
     </div>
     <a-scene
       embedded
@@ -38,21 +41,23 @@
           scale="1 1 1"
           onclick="myFunction()"
         ></a-box>
-        <a-entity
-          position="0 1.5 0"
-          text="value: Привет, это AR текст!; color: #FFD700; width: 3; align: center;"
-        ></a-entity>
+        <a-text
+          value="Привет, это AR текст!"
+          position="-1 0.5 1"
+          rotation="0 45 0"
+          color="#FFD700"
+        ></a-text>
       </a-marker>
       <a-entity
         position="0 0 0"
         scale="0 0 0"
         camera="fov: 160"
         cursor="rayOrigin: mouse"
+        position="0 1.5 0"
+        text="value: Привет, это AR текст!; color: #FFD700; width: 3; align: center;"
       ></a-entity>
     </a-scene>
 
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     <script>
       function myFunction() {
         alert("Вы нажали на кнопку!");
