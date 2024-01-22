@@ -29,7 +29,7 @@
       arjs="trackingMethod: best; debugUIEnabled: false; sourceType: webcam;"
       vr-mode-ui='enabled: false'
     >
-      <a-marker
+      <a-marker-camera
         preset="custom"
         type="pattern"
         url="./mark2.png"
@@ -40,7 +40,7 @@
           color="#4CC3D9"
           rotation="0 45 0"
           scale="1 1 1"
-          <!-- onclick="myFunction()" -->
+         
         ></a-box>
         <a-text
           value="Привет, это AR текст!"
@@ -48,7 +48,7 @@
           rotation="0 45 0"
           color="#FFD700"
         ></a-text>
-      </a-marker>
+      </a-marker-camera>
       <a-entity
         position="0 0 0"
         scale="0 0 0"
