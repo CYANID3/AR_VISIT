@@ -30,8 +30,8 @@
       vr-mode-ui='enabled: false'
     >
       <a-marker
-        preset="hiro"
-        <!-- type="pattern" -->
+        preset="custom"
+        type="pattern"
         url="./mark2.png"
         scale="1 1 1"
       >
@@ -40,7 +40,7 @@
           color="#4CC3D9"
           rotation="0 45 0"
           scale="1 1 1"
-          onclick="myFunction()"
+          <!-- onclick="myFunction()" -->
         ></a-box>
         <a-text
           value="Привет, это AR текст!"
@@ -59,10 +59,10 @@
       ></a-entity>
     </a-scene>
 
-    <script>
+    <!-- <script>
       function myFunction() {
         alert("Вы нажали на кнопку!");
       }
-    </script>
+    </script> -->
   </body>
 </html>
